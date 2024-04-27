@@ -1,7 +1,7 @@
 import openai
 
 def generate_text(prompt):
-    openai.api_key = 'sk-proj-OePrjHBDbWpsb76GShgmT3BlbkFJojgPQ90XUqA6riVozgij'
+    openai.api_key = 'secret'
     response = openai.Completion.create(
         model="gpt-3.5-turbo-instruct",
         prompt=prompt,
