@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Writing Assistant</title>
+</head>
+<body>
+    <h1>Smart Writing Assistant</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Generate Text</button>
+    </form>
+    {% if generated_text %}
+    <div>
+        <h2>Generated Text:</h2>
+        <p>{{ generated_text }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
